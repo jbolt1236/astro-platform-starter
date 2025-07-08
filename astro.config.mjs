@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
 import netlify from '@astrojs/netlify';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
@@ -8,6 +9,6 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()]
     },
-    integrations: [react()],
+    integrations: [react(),mdx()],
     adapter: netlify()
 });
